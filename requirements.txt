@@ -1,0 +1,35 @@
+# RegBench — minimum runtime dependencies
+#
+# Only the dependencies actually imported by `examples/` and `pipeline/` are
+# listed. The vendored MinerU under `pipeline/ingestion/pdf_converter/Magic-PDF/`
+# carries its own deep stack (torch, transformers, paddle, …); install those
+# separately via that subtree's pyproject.toml — see ingestion notes below.
+
+# --- Loading the released JSONLs ------------------------------------------
+# Optional. Only needed if you load the dataset via Hugging Face
+# (`examples/load_dataset.py --source hf`); reading data/*.jsonl directly
+# uses only the standard library.
+datasets>=2.18.0
+
+# --- LLM clients ----------------------------------------------------------
+# `examples/grade_strict.py` uses the Anthropic SDK directly.
+# `pipeline/shared` (vendored as `llm_client.py` next to each runner) uses
+# the OpenAI SDK against an OpenAI-compatible gateway, so any vendor whose
+# endpoint speaks the OpenAI protocol works.
+anthropic>=0.50.0    # Sonnet 4.6 model id requires a recent SDK
+openai>=1.60.0       # GPT-5.4 model id requires a recent SDK
+httpx>=0.27          # imported directly by the shipped llm_client wrapper
+httpcore>=1.0        # imported directly by the shipped llm_client wrapper
+python-dotenv>=1.0   # llm_client loads a .env file at import time
+
+# --- Retrieval baseline ---------------------------------------------------
+# Only needed if you run `pipeline/baselines/run_bm25_baseline.py`.
+rank-bm25>=0.2.2
+
+# --- Source extraction (DNV PDF -> markdown) ------------------------------
+# Only needed if you re-ingest DNV PDFs from source.
+# The driver `pipeline/ingestion/pdf_converter/pdf_to_latex.py` uses pypdf
+# for page-size probing; the vendored MinerU brings its own heavy deps via
+# its own pyproject.toml — install with:
+#   pip install -e pipeline/ingestion/pdf_converter/Magic-PDF
+pypdf>=4.0

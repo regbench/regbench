@@ -1,0 +1,26 @@
+Creative Commons Attribution-NonCommercial 4.0 International (CC-BY-NC-4.0)
+
+This dataset (the scenarios, required_facts, chain metadata, and accompanying
+code in this repository) is released under the Creative Commons Attribution-
+NonCommercial 4.0 International License.
+
+You are free to:
+  - Share — copy and redistribute the material in any medium or format
+  - Adapt — remix, transform, and build upon the material
+
+Under the following terms:
+  - Attribution — You must give appropriate credit, provide a link to the
+    license, and indicate if changes were made. You may do so in any
+    reasonable manner, but not in any way that suggests the licensor
+    endorses you or your use.
+  - NonCommercial — You may not use the material for commercial purposes.
+
+Full license text: https://creativecommons.org/licenses/by-nc/4.0/legalcode
+
+Note on source corpora:
+  - DNV-RU-SHIP rules and Basel III §217 (12 CFR Part 217) source PDFs are
+    distributed by their respective rights-holders and are NOT redistributed
+    in this repository. DNV PDFs are gated behind a free DNV registration;
+    section identifiers in the released items map deterministically to those
+    PDFs, so users obtain source text from rules.dnv.com and ecfr.gov
+    directly under those upstream terms.

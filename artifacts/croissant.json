@@ -1,0 +1,165 @@
+{
+  "@context": {
+    "@language": "en",
+    "@vocab": "https://schema.org/",
+    "citeAs": "cr:citeAs",
+    "column": "cr:column",
+    "conformsTo": "dct:conformsTo",
+    "cr": "http://mlcommons.org/croissant/",
+    "rai": "http://mlcommons.org/croissant/RAI/",
+    "data": {
+      "@id": "cr:data",
+      "@type": "@json"
+    },
+    "dataType": {
+      "@id": "cr:dataType",
+      "@type": "@vocab"
+    },
+    "dct": "http://purl.org/dc/terms/",
+    "examples": {
+      "@id": "cr:examples",
+      "@type": "@json"
+    },
+    "extract": "cr:extract",
+    "field": "cr:field",
+    "fileProperty": "cr:fileProperty",
+    "fileObject": "cr:fileObject",
+    "fileSet": "cr:fileSet",
+    "format": "cr:format",
+    "includes": "cr:includes",
+    "isLiveDataset": "cr:isLiveDataset",
+    "jsonPath": "cr:jsonPath",
+    "key": "cr:key",
+    "md5": "cr:md5",
+    "parentField": "cr:parentField",
+    "path": "cr:path",
+    "recordSet": "cr:recordSet",
+    "references": "cr:references",
+    "regex": "cr:regex",
+    "repeated": "cr:repeated",
+    "replace": "cr:replace",
+    "sc": "https://schema.org/",
+    "separator": "cr:separator",
+    "source": "cr:source",
+    "subField": "cr:subField",
+    "transform": "cr:transform"
+  },
+  "@type": "sc:Dataset",
+  "name": "RegBench",
+  "description": "Source-grounded benchmark for regulatory cross-reference reasoning. Given a scenario, a model must follow explicit cross-references through a regulatory corpus, apply the resulting chain, and produce an answer that contains every required atomic fact. Items are scored by strict atomic-fact conjunction. Built over DNV Ship Rules (maritime classification) and Basel III §217 (US banking).",
+  "conformsTo": "http://mlcommons.org/croissant/1.1",
+  "citeAs": "@inproceedings{regbench2026, title={RegBench: Source-Grounded Benchmarks for Regulatory Cross-Reference Reasoning}, author={Anonymous}, booktitle={NeurIPS 2026 Datasets and Benchmarks Track}, year={2026}}",
+  "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+  "url": "https://regbench.github.io/",
+  "version": "1.0.1",
+  "datePublished": "2026-05-04",
+  "isLiveDataset": false,
+  "keywords": [
+    "regulatory reasoning",
+    "long-context QA",
+    "cross-reference traversal",
+    "source-grounded",
+    "atomic-fact grading",
+    "compliance",
+    "Basel III",
+    "DNV Ship Rules"
+  ],
+  "rai:dataCollection": "Items are LLM-synthesised (Claude Sonnet 4.6 at temperature 0.3) over chains sampled from the cross-reference graphs of two public regulatory corpora: DNV Ship Rules and 12 CFR Part 217 (Basel III). Section identifiers and verbatim source spans are preserved in each item's annotator_grounding field. No human-subject data is collected; no PII; scenarios involve hypothetical ship designs and bank capital positions.",
+  "rai:dataAnnotationProtocol": "Two-stage annotation. Stage 1 (automated): a calibrated v5d audit (locked GPT-5.4 prompt at xhigh reasoning effort) decomposes each item into per-fact reads against verbatim source and assigns an item-level disposition. Stage 2 (human): every v5d-flagged item is source-grounded re-reviewed by credentialed reviewers (three DNV ship-design SMEs for DNV; four finance-credentialed reviewers for Basel) under a v5d-advisory protocol. Reviewers see v5d's item-level disposition as an advisory hint on flagged items; v5d's per-fact reasoning is rendered only on flagged items, so per-fact judgements on v5d-passed items are independent of audit flagging at the fact level. Raw SME annotation labels and disagreement logs are retained internally to preserve audit-slate integrity.",
+  "rai:dataAnnotationAnalysis": "On the held-out DNV TEST split: 0/446 fact-level miss rate on v5d-passed items (rule-of-three 95% upper bound ≤ 0.67%); 98.94% fact-level agreement with SME source-grounded re-review. On the combined 200-item DNV TRAIN+TEST audit pool: 99.0% item-level agreement, 99.1% fact-level agreement, 97.4% recall, 100% precision on SME-flagged items. Locked v5d ports unchanged to Basel III §217: 76/79 item / 453/478 fact agreement on the audited slice; 0/122 fact-level defects on the 20-item v5d-pass sample. Inter-annotator agreement on DNV TEST overlap: κ = 0.77 item / 0.905 fact.",
+  "rai:dataLimitations": "Two corpora (marine engineering + US banking); transfer to FDA/FAA/non-English regimes is not demonstrated. 827 questions / 4,766 atomic facts is modest in scale; we traded scale for verified quality. Tier (chain-depth) definitions are within-domain; cross-domain claims concern pattern, not absolute level. Closed-book performance is 0–4% across the evaluated panel — item-level memorisation is precluded by construction (scenarios are LLM-synthesised after corpus snapshots), but subtler latent contamination cannot be fully ruled out.",
+  "rai:dataSocialImpact": "Intended to enable evaluation of LLMs and retrieval systems on source-grounded multi-hop regulatory reasoning, and to surface the chain-incorrect / conclusion-correct failure mode that lenient scoring hides. Not intended for: training compliance-decision systems, certifying any model for production regulatory use, or making broad regulatory-reasoning competence claims beyond explicit cross-reference traversal.",
+  "rai:dataBiases": "English-only corpora. Two regulatory regimes (US/international banking; international maritime classification under DNV). Tier-coverage is balanced within each corpus by construction (10 items per tier in the pilot subset; ~100 items per tier in the DNV main split). Question-form distribution: mix of MCQ and free-form explanation items.",
+  "rai:personalSensitiveInformation": "None. Source corpora are public regulatory text; scenarios are hypothetical and contain no personal, sensitive, or proprietary information. No human-subject data was collected.",
+  "creator": [
+    {
+      "@type": "Organization",
+      "name": "Anonymous (RegBench authors)"
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "Anonymous (RegBench authors)"
+  },
+  "distribution": [
+    {
+      "@type": "cr:FileObject",
+      "@id": "regbench-repository",
+      "name": "regbench-repository",
+      "description": "RegBench release repository (data, code, prompts, docs).",
+      "contentUrl": "https://regbench.github.io/",
+      "encodingFormat": "git+https",
+      "sha256": "main"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "dnv-jsonl",
+      "name": "dnv.jsonl",
+      "description": "DNV Ship Rules main pool (R500_, F500_ ids).",
+      "contentUrl": "data/dnv.jsonl",
+      "encodingFormat": "application/jsonl"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "pilot-jsonl",
+      "name": "pilot.jsonl",
+      "description": "DNV pilot subset (P50_ ids; carries gold_pages).",
+      "contentUrl": "data/pilot.jsonl",
+      "encodingFormat": "application/jsonl"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "basel-jsonl",
+      "name": "basel.jsonl",
+      "description": "Basel III §217 pool (B_ ids).",
+      "contentUrl": "data/basel.jsonl",
+      "encodingFormat": "application/jsonl"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "v5d-verdicts-jsonl",
+      "name": "v5d_verdicts.jsonl",
+      "description": "Per-item v5d audit dispositions (item-level) for the audited subset of the released pool.",
+      "contentUrl": "data/v5d_verdicts.jsonl",
+      "encodingFormat": "application/jsonl"
+    }
+  ],
+  "recordSet": [
+    {
+      "@type": "cr:RecordSet",
+      "@id": "regbench-items",
+      "name": "regbench-items",
+      "description": "RegBench item record set: scenario-anchored, chain-grounded QA items with strict atomic-fact propositions.",
+      "field": [
+        {"@type": "cr:Field", "@id": "id", "name": "id", "description": "Stable item id.", "dataType": "sc:Text"},
+        {"@type": "cr:Field", "@id": "domain", "name": "domain", "description": "Source corpus.", "dataType": "sc:Text"},
+        {"@type": "cr:Field", "@id": "tier", "name": "tier", "description": "Chain depth (0–4 DNV; 0–3 Basel).", "dataType": "sc:Integer"},
+        {"@type": "cr:Field", "@id": "source_section", "name": "source_section", "description": "Anchor section identifier where reasoning starts.", "dataType": "sc:Text"},
+        {"@type": "cr:Field", "@id": "question_text", "name": "question_text", "description": "Scenario-style question, self-contained; chain identifiers are not leaked into the prompt.", "dataType": "sc:Text"},
+        {"@type": "cr:Field", "@id": "format", "name": "format", "description": "mcq or explanation.", "dataType": "sc:Text"},
+        {"@type": "cr:Field", "@id": "options", "name": "options", "description": "MCQ options (when format == mcq).", "dataType": "sc:Text", "repeated": true},
+        {"@type": "cr:Field", "@id": "correct", "name": "correct", "description": "MCQ correct option key (when format == mcq).", "dataType": "sc:Text"},
+        {"@type": "cr:Field", "@id": "required_facts", "name": "required_facts", "description": "Atomic propositions the answer must contain. Strict-conjunction graded.", "dataType": "sc:Text", "repeated": true},
+        {"@type": "cr:Field", "@id": "annotator_grounding", "name": "annotator_grounding", "description": "Source-grounded rationale (chain identifiers, target section quotes, derivation steps).", "dataType": "sc:Text"},
+        {"@type": "cr:Field", "@id": "scenario_parameters", "name": "scenario_parameters", "description": "Numeric / categorical inputs that define the scenario.", "dataType": "sc:Text"},
+        {"@type": "cr:Field", "@id": "tested_pattern", "name": "tested_pattern", "description": "Reasoning-pattern category.", "dataType": "sc:Text"},
+        {"@type": "cr:Field", "@id": "leak_check", "name": "leak_check", "description": "Leak-filter trace.", "dataType": "sc:Text"}
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "v5d-verdicts",
+      "name": "v5d-verdicts",
+      "description": "Per-item v5d audit dispositions over the audited subset of the released pool. See data/v5d_verdicts.README.md for coverage.",
+      "field": [
+        {"@type": "cr:Field", "@id": "verdicts.id", "name": "id", "description": "Stable item id (joins to regbench-items).", "dataType": "sc:Text"},
+        {"@type": "cr:Field", "@id": "verdicts.domain", "name": "domain", "description": "Source corpus.", "dataType": "sc:Text"},
+        {"@type": "cr:Field", "@id": "verdicts.tier", "name": "tier", "description": "Chain depth.", "dataType": "sc:Integer"},
+        {"@type": "cr:Field", "@id": "verdicts.v5d_disposition", "name": "v5d_disposition", "description": "PASS, FAIL, or UNCERTAIN.", "dataType": "sc:Text"},
+        {"@type": "cr:Field", "@id": "verdicts.v5d_reason", "name": "v5d_reason", "description": "Auditor rationale (free text).", "dataType": "sc:Text"},
+        {"@type": "cr:Field", "@id": "verdicts.auditor_model", "name": "auditor_model", "description": "Model id used as auditor.", "dataType": "sc:Text"},
+        {"@type": "cr:Field", "@id": "verdicts.reasoning_effort", "name": "reasoning_effort", "description": "Reasoning-effort setting at audit time.", "dataType": "sc:Text"}
+      ]
+    }
+  ]
+}
