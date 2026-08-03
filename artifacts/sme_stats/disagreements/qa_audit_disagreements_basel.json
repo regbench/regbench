@@ -1,0 +1,467 @@
+{
+ "corpus": "basel",
+ "slice": "Basel \u00a7217 v5d-flagged set + reviewer-A passed-set audit",
+ "scope": "v5d-vs-reviewer disagreements on item quality only; agreeing labels are withheld (no verification value, and release would expose the audit slate)",
+ "legend": {
+  "v5d_flagged_sme_ok": "v5d called the fact defective; the reviewer let it stand",
+  "v5d_ok_sme_defect": "v5d passed the fact; the reviewer marked it defective",
+  "sme_ambiguous": "reviewer could not decide",
+  "disposition_overrule": "reviewer kept an item v5d flagged"
+ },
+ "reviewers": [
+  {
+   "reviewer": "reviewer_B",
+   "arm": "flagged",
+   "n_fact_labels": 143,
+   "n_items_dispositioned": 23,
+   "n_disagreements": 20
+  },
+  {
+   "reviewer": "reviewer_C",
+   "arm": "flagged",
+   "n_fact_labels": 132,
+   "n_items_dispositioned": 22,
+   "n_disagreements": 8
+  },
+  {
+   "reviewer": "reviewer_D",
+   "arm": "flagged",
+   "n_fact_labels": 142,
+   "n_items_dispositioned": 22,
+   "n_disagreements": 8
+  },
+  {
+   "reviewer": "reviewer_A",
+   "arm": "passed",
+   "n_fact_labels": 122,
+   "n_items_dispositioned": 20,
+   "n_disagreements": 0
+  }
+ ],
+ "records": [
+  {
+   "kind": "v5d_flagged_sme_ok",
+   "reviewer": "reviewer_B",
+   "arm": "flagged",
+   "item_id": "B_T0_0152",
+   "fact_index": 0,
+   "v5d_verdict": "incorrect",
+   "sme_label": "ok",
+   "sme_note": "v5d got wrong",
+   "in_released_pool": true
+  },
+  {
+   "kind": "v5d_flagged_sme_ok",
+   "reviewer": "reviewer_B",
+   "arm": "flagged",
+   "item_id": "B_T1_0240",
+   "fact_index": 4,
+   "v5d_verdict": "incorrect",
+   "sme_label": "ok",
+   "sme_note": "",
+   "in_released_pool": true
+  },
+  {
+   "kind": "v5d_flagged_sme_ok",
+   "reviewer": "reviewer_B",
+   "arm": "flagged",
+   "item_id": "B_T1_0240",
+   "fact_index": 5,
+   "v5d_verdict": "incorrect",
+   "sme_label": "ok",
+   "sme_note": "",
+   "in_released_pool": true
+  },
+  {
+   "kind": "v5d_ok_sme_defect",
+   "reviewer": "reviewer_B",
+   "arm": "flagged",
+   "item_id": "B_T2_0045",
+   "fact_index": 4,
+   "v5d_verdict": "correct",
+   "sme_label": "defect",
+   "sme_note": "",
+   "in_released_pool": true
+  },
+  {
+   "kind": "v5d_flagged_sme_ok",
+   "reviewer": "reviewer_B",
+   "arm": "flagged",
+   "item_id": "B_T1_0226",
+   "fact_index": 0,
+   "v5d_verdict": "incorrect",
+   "sme_label": "ok",
+   "sme_note": "",
+   "in_released_pool": true
+  },
+  {
+   "kind": "sme_ambiguous",
+   "reviewer": "reviewer_B",
+   "arm": "flagged",
+   "item_id": "B_T1_0226",
+   "fact_index": 1,
+   "v5d_verdict": "correct",
+   "sme_label": "ambiguous",
+   "sme_note": "",
+   "in_released_pool": true
+  },
+  {
+   "kind": "v5d_ok_sme_defect",
+   "reviewer": "reviewer_B",
+   "arm": "flagged",
+   "item_id": "B_T1_0226",
+   "fact_index": 2,
+   "v5d_verdict": "correct",
+   "sme_label": "defect",
+   "sme_note": "",
+   "in_released_pool": true
+  },
+  {
+   "kind": "sme_ambiguous",
+   "reviewer": "reviewer_B",
+   "arm": "flagged",
+   "item_id": "B_T1_0226",
+   "fact_index": 3,
+   "v5d_verdict": "correct",
+   "sme_label": "ambiguous",
+   "sme_note": "",
+   "in_released_pool": true
+  },
+  {
+   "kind": "v5d_flagged_sme_ok",
+   "reviewer": "reviewer_B",
+   "arm": "flagged",
+   "item_id": "B_T1_0226",
+   "fact_index": 5,
+   "v5d_verdict": "incorrect",
+   "sme_label": "ok",
+   "sme_note": "",
+   "in_released_pool": true
+  },
+  {
+   "kind": "v5d_flagged_sme_ok",
+   "reviewer": "reviewer_B",
+   "arm": "flagged",
+   "item_id": "B_T2_0000",
+   "fact_index": 3,
+   "v5d_verdict": "incorrect",
+   "sme_label": "ok",
+   "sme_note": "",
+   "in_released_pool": true
+  },
+  {
+   "kind": "v5d_ok_sme_defect",
+   "reviewer": "reviewer_B",
+   "arm": "flagged",
+   "item_id": "B_T2_0050",
+   "fact_index": 3,
+   "v5d_verdict": "correct",
+   "sme_label": "defect",
+   "sme_note": "",
+   "in_released_pool": true
+  },
+  {
+   "kind": "sme_ambiguous",
+   "reviewer": "reviewer_B",
+   "arm": "flagged",
+   "item_id": "B_T2_0050",
+   "fact_index": 6,
+   "v5d_verdict": "uncertain",
+   "sme_label": "ambiguous",
+   "sme_note": "",
+   "in_released_pool": true
+  },
+  {
+   "kind": "v5d_ok_sme_defect",
+   "reviewer": "reviewer_B",
+   "arm": "flagged",
+   "item_id": "B_T3_0097",
+   "fact_index": 3,
+   "v5d_verdict": "correct",
+   "sme_label": "defect",
+   "sme_note": "",
+   "in_released_pool": true
+  },
+  {
+   "kind": "v5d_ok_sme_defect",
+   "reviewer": "reviewer_B",
+   "arm": "flagged",
+   "item_id": "B_T3_0097",
+   "fact_index": 4,
+   "v5d_verdict": "correct",
+   "sme_label": "defect",
+   "sme_note": "",
+   "in_released_pool": true
+  },
+  {
+   "kind": "v5d_ok_sme_defect",
+   "reviewer": "reviewer_B",
+   "arm": "flagged",
+   "item_id": "B_T3_0097",
+   "fact_index": 5,
+   "v5d_verdict": "correct",
+   "sme_label": "defect",
+   "sme_note": "",
+   "in_released_pool": true
+  },
+  {
+   "kind": "sme_ambiguous",
+   "reviewer": "reviewer_B",
+   "arm": "flagged",
+   "item_id": "B_T3_0109",
+   "fact_index": 2,
+   "v5d_verdict": "incorrect",
+   "sme_label": "ambiguous",
+   "sme_note": "",
+   "in_released_pool": true
+  },
+  {
+   "kind": "disposition_overrule",
+   "reviewer": "reviewer_B",
+   "arm": "flagged",
+   "item_id": "B_T0_0152",
+   "fact_index": null,
+   "v5d_verdict": "flag",
+   "sme_label": "keep",
+   "sme_note": "",
+   "in_released_pool": true
+  },
+  {
+   "kind": "disposition_overrule",
+   "reviewer": "reviewer_B",
+   "arm": "flagged",
+   "item_id": "B_T1_0240",
+   "fact_index": null,
+   "v5d_verdict": "flag",
+   "sme_label": "keep",
+   "sme_note": "",
+   "in_released_pool": true
+  },
+  {
+   "kind": "disposition_overrule",
+   "reviewer": "reviewer_B",
+   "arm": "flagged",
+   "item_id": "B_T1_0226",
+   "fact_index": null,
+   "v5d_verdict": "flag",
+   "sme_label": "keep",
+   "sme_note": "",
+   "in_released_pool": true
+  },
+  {
+   "kind": "disposition_overrule",
+   "reviewer": "reviewer_B",
+   "arm": "flagged",
+   "item_id": "B_T2_0020",
+   "fact_index": null,
+   "v5d_verdict": "flag",
+   "sme_label": "keep",
+   "sme_note": "",
+   "in_released_pool": true
+  },
+  {
+   "kind": "sme_ambiguous",
+   "reviewer": "reviewer_C",
+   "arm": "flagged",
+   "item_id": "B_T1_0239",
+   "fact_index": 3,
+   "v5d_verdict": "correct",
+   "sme_label": "ambiguous",
+   "sme_note": "",
+   "in_released_pool": false
+  },
+  {
+   "kind": "sme_ambiguous",
+   "reviewer": "reviewer_C",
+   "arm": "flagged",
+   "item_id": "B_T2_0003",
+   "fact_index": 5,
+   "v5d_verdict": "uncertain",
+   "sme_label": "ambiguous",
+   "sme_note": "",
+   "in_released_pool": false
+  },
+  {
+   "kind": "v5d_ok_sme_defect",
+   "reviewer": "reviewer_C",
+   "arm": "flagged",
+   "item_id": "B_T3_0122",
+   "fact_index": 5,
+   "v5d_verdict": "correct",
+   "sme_label": "defect",
+   "sme_note": "Operational criteria are not met ",
+   "in_released_pool": false
+  },
+  {
+   "kind": "sme_ambiguous",
+   "reviewer": "reviewer_C",
+   "arm": "flagged",
+   "item_id": "B_T3_0123",
+   "fact_index": 5,
+   "v5d_verdict": "incorrect",
+   "sme_label": "ambiguous",
+   "sme_note": "4% is in the asuumption of the scenario, but not source-supported.",
+   "in_released_pool": false
+  },
+  {
+   "kind": "sme_ambiguous",
+   "reviewer": "reviewer_C",
+   "arm": "flagged",
+   "item_id": "B_T3_0123",
+   "fact_index": 6,
+   "v5d_verdict": "incorrect",
+   "sme_label": "ambiguous",
+   "sme_note": "Same as the fact 6.",
+   "in_released_pool": false
+  },
+  {
+   "kind": "sme_ambiguous",
+   "reviewer": "reviewer_C",
+   "arm": "flagged",
+   "item_id": "B_T3_0144",
+   "fact_index": 1,
+   "v5d_verdict": "uncertain",
+   "sme_label": "ambiguous",
+   "sme_note": "",
+   "in_released_pool": false
+  },
+  {
+   "kind": "sme_ambiguous",
+   "reviewer": "reviewer_C",
+   "arm": "flagged",
+   "item_id": "B_T3_0144",
+   "fact_index": 2,
+   "v5d_verdict": "uncertain",
+   "sme_label": "ambiguous",
+   "sme_note": "",
+   "in_released_pool": false
+  },
+  {
+   "kind": "disposition_overrule",
+   "reviewer": "reviewer_C",
+   "arm": "flagged",
+   "item_id": "B_T2_0052",
+   "fact_index": null,
+   "v5d_verdict": "flag",
+   "sme_label": "keep",
+   "sme_note": "",
+   "in_released_pool": true
+  },
+  {
+   "kind": "v5d_ok_sme_defect",
+   "reviewer": "reviewer_D",
+   "arm": "flagged",
+   "item_id": "B_T0_0152",
+   "fact_index": 1,
+   "v5d_verdict": "correct",
+   "sme_label": "defect",
+   "sme_note": "",
+   "in_released_pool": true
+  },
+  {
+   "kind": "v5d_ok_sme_defect",
+   "reviewer": "reviewer_D",
+   "arm": "flagged",
+   "item_id": "B_T0_0152",
+   "fact_index": 4,
+   "v5d_verdict": "correct",
+   "sme_label": "defect",
+   "sme_note": "",
+   "in_released_pool": true
+  },
+  {
+   "kind": "v5d_ok_sme_defect",
+   "reviewer": "reviewer_D",
+   "arm": "flagged",
+   "item_id": "B_T2_0045",
+   "fact_index": 4,
+   "v5d_verdict": "correct",
+   "sme_label": "defect",
+   "sme_note": "Fact lists the \u00a7217.31 carve-outs correctly, but it misses the controlling rule in \u00a7217.42(j)(2)(i): a purchased credit derivative recognized as a credit risk mitigant does not require separate counterparty credit risk capital under \u00a7217.31.",
+   "in_released_pool": true
+  },
+  {
+   "kind": "sme_ambiguous",
+   "reviewer": "reviewer_D",
+   "arm": "flagged",
+   "item_id": "B_T0_0202",
+   "fact_index": 4,
+   "v5d_verdict": "incorrect",
+   "sme_label": "ambiguous",
+   "sme_note": "Lack of written confirmation does not establish failure of \u00a7217.3(a)(4); the rule turns on actual transferability under documents and applicable law.",
+   "in_released_pool": false
+  },
+  {
+   "kind": "sme_ambiguous",
+   "reviewer": "reviewer_D",
+   "arm": "flagged",
+   "item_id": "B_T0_0202",
+   "fact_index": 5,
+   "v5d_verdict": "incorrect",
+   "sme_label": "ambiguous",
+   "sme_note": "Because \u00a7217.3(a)(4) is not established either way, it is unclear whether all cleared-transaction requirements are currently satisfied.",
+   "in_released_pool": false
+  },
+  {
+   "kind": "v5d_ok_sme_defect",
+   "reviewer": "reviewer_D",
+   "arm": "flagged",
+   "item_id": "B_T0_0214",
+   "fact_index": 6,
+   "v5d_verdict": "correct",
+   "sme_label": "defect",
+   "sme_note": "The bottom-line result is right, but the fact relies on the unsupported $17.6M cap; under \u00a7217.11(f)(2), the key reason is that the leverage buffer is below the leverage buffer requirement.",
+   "in_released_pool": true
+  },
+  {
+   "kind": "v5d_ok_sme_defect",
+   "reviewer": "reviewer_D",
+   "arm": "flagged",
+   "item_id": "B_T2_0019",
+   "fact_index": 3,
+   "v5d_verdict": "correct",
+   "sme_label": "defect",
+   "sme_note": "E < 0.8, not a hedge pair",
+   "in_released_pool": true
+  },
+  {
+   "kind": "v5d_ok_sme_defect",
+   "reviewer": "reviewer_D",
+   "arm": "flagged",
+   "item_id": "B_T2_0019",
+   "fact_index": 6,
+   "v5d_verdict": "correct",
+   "sme_label": "defect",
+   "sme_note": "",
+   "in_released_pool": true
+  }
+ ],
+ "summary": {
+  "v5d_flagged_sme_ok": 6,
+  "v5d_ok_sme_defect": 13,
+  "sme_ambiguous": 12,
+  "disposition_overrule": 5
+ },
+ "counts": {
+  "records_total": 36,
+  "genuine_conflicts": 24,
+  "fact_level_conflicts": 19,
+  "item_level_only_overrules": 2,
+  "reviewer_undecided_not_a_conflict": 12,
+  "unique_items": 18
+ },
+ "release_reconciliation": {
+  "note": "Some records reference items the audit KILLED, so they are absent from data/*.jsonl by design. They are retained here because removing them would hide the disagreements that caused the kill.",
+  "records_referencing_released_items": 27,
+  "records_referencing_killed_items": 9,
+  "killed_item_ids": [
+   "B_T0_0202",
+   "B_T1_0239",
+   "B_T2_0003",
+   "B_T3_0122",
+   "B_T3_0123",
+   "B_T3_0144"
+  ]
+ },
+ "scope_note": "Table 2's Basel row (453/478 = 94.77% fact agreement) reproduces exactly by re-running regbench_basel/compute_basel_audit_summary.py. That figure combines two arms: 331/356 on the v5d-flagged items (v5d per-fact verdicts joined to reviewer labels) plus 122/122 on the 20-item v5d-pass sample (taken directly, no v5d join needed -- v5d passed those items and the reviewer marked every fact ok, so agreement is total by construction). Bridging to this log: 478 - 453 = 25 mismatches = 9 (v5d correct / SME defect) + 3 (same, with reviewers split) + 3 (v5d incorrect / SME ok) + 10 cells involving `ambiguous` or `uncertain`. The first 15 are the genuine conflicts, recorded here as 19 records because shared items are logged once per reviewer. The 10 ambiguous/uncertain cells count against the published agreement RATE -- that computation treats `ambiguous` as defect -- but are deliberately not conflicts here: a reviewer who could not decide has not contradicted the audit, and v5d expressing doubt has not asserted anything, since `uncertain` alone never flags. The published figure is regenerated by re-running regbench_basel/compute_basel_audit_summary.py."
+}

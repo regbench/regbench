@@ -1,8 +1,8 @@
-annotation_visibility,corpus,fact_agree_ci95,fact_agree_k,fact_agree_n,fact_gt_acc_ci95,fact_gt_acc_k,fact_gt_acc_n,flag_precision_k,flag_precision_n,iaa_ac1,iaa_kappa_fact,iaa_kappa_item,iaa_note,iaa_overlap_items,item_agree_ci95,item_agree_k,item_agree_n,item_agree_pct,n_facts,n_facts_passed,n_items,passed_miss_k,passed_miss_n,rule_of_three_ucb_pct,slice,sme_flag_recall_k,sme_flag_recall_n,source,strict_ok_items
-,DNV,"(98.36, 99.51)",1107,1117,,,,38,38,,,,,,"(96.43, 99.73)",198,200,,1117,,200,,,,dnv_train_test_combined_full_audit,38,39,Table 1 'Full audit DNV TRAIN+TEST'; §4.1; PAPER_NUMBERS,
-blind at fact level (interface-enforced); item-level advisory hint,DNV,"(97.71, 99.51)",561,567,,,,,,,0.905,0.77,,20,,,,,,446,,0,446,0.67,dnv_test_pass_set_blind,,,§4.1 primary miss-rate estimate; tex:361-365,
-,DNV,"(91.07, 96.62)",256,271,,,,,,,,,,,,,,100.0,,,,,,,dnv_selective_split,,,Table 1 selective row; appendix,
-,Basel,"(92.39, 96.43)",453,478,,,,,,0.54,,,"small-n stability statistic, not transfer evidence (paper §4.1)",4,"(89.42, 98.7)",76,79,,,,,,,,basel_audited_slice,,,tex:369; Table 1 Basel row,
-advisory at fact level (v5d verdict+reason visible),Basel,,,,,,,,,,,,,,,,,,,122,,0,122,2.5,basel_reviewerA_pass_set,,,§4.1; tex:363,
-,DNV+Basel,"(96.67, 98.02)",2088,2143,,,,,,,,,,,"(95.84, 98.91)",366,374,,,,,,,,aggregate_union_all_slices,,,Table 1 aggregate row,
-blind (audit predates v5d),DNV,,,,"(90.89, 95.05)",526,564,,,,,,,,,,,,,,100,,,,pre_audit_baseline_sme3_100q,,,tex:387; §3.3,88
+slice,corpus,fact_agree_ci_lo,fact_agree_ci_hi,fact_agree_k,fact_agree_n,fact_gt_acc_ci_lo,fact_gt_acc_ci_hi,fact_gt_acc_k,fact_gt_acc_n,flag_precision_k,flag_precision_n,iaa_ac1,iaa_kappa_fact,iaa_kappa_item,iaa_note,iaa_overlap_items,item_agree_ci_lo,item_agree_ci_hi,item_agree_k,item_agree_n,item_agree_pct,n_facts,n_facts_passed,n_items,passed_miss_k,passed_miss_n,rule_of_three_ucb_pct,sme_flag_recall_k,sme_flag_recall_n,strict_ok_items,source
+dnv_train_test_combined_full_audit,DNV,98.36,99.51,1107,1117,,,,,38,38,,,,,,96.43,99.73,198,200,,1117,,200,,,,38,39,,Table 1 'Full audit DNV TRAIN+TEST'; §4.1; PAPER_NUMBERS
+dnv_test_pass_set_blind,DNV,97.71,99.51,561,567,,,,,,,,0.905,0.77,,20,,,,,,,446,,0,446,0.67,,,,§4.1 primary miss-rate estimate; tex:361-365
+dnv_selective_split,DNV,91.07,96.62,256,271,,,,,,,,,,,,,,,,100.0,,,,,,,,,,Table 1 selective row; appendix
+basel_audited_slice,Basel,92.39,96.43,453,478,,,,,,,0.54,,,small-n stability statistic; not transfer evidence (paper §4.1),4,89.42,98.7,76,79,,,,,,,,,,,tex:369; Table 1 Basel row
+basel_reviewerA_pass_set,Basel,,,,,,,,,,,,,,,,,,,,,,122,,0,122,2.5,,,,§4.1; tex:363
+aggregate_union_all_slices,DNV+Basel,96.67,98.02,2088,2143,,,,,,,,,,,,95.84,98.91,366,374,,,,,,,,,,,Table 1 aggregate row
+pre_audit_baseline_sme3_100q,DNV,,,,,90.89,95.05,526,564,,,,,,,,,,,,,,,100,,,,,,88,tex:387; §3.3

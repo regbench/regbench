@@ -82,7 +82,7 @@
    "passed_miss_k": 0,
    "passed_miss_n": 122,
    "rule_of_three_ucb_pct": 2.5,
-   "annotation_visibility": "advisory at fact level (v5d verdict+reason visible)",
+   "annotation_visibility": "blind at fact level; item-level advisory hint",
    "source": "\u00a74.1; tex:363"
   },
   {

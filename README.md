@@ -40,6 +40,7 @@ Total: **827 questions / 4,766 atomic-fact propositions**, all post-repair (rele
 │   └── judge/               # Strict atomic-fact conjunction grading
 ├── artifacts/               # Croissant metadata + aggregated SME statistics
 │   └── sme_stats/           # v5d/judge calibration slices, disposition ledger
+│       └── disagreements/   # Every contested SME label (judge-vs-SME, v5d-vs-reviewer)
 ├── prompts/                 # Locked v5d audit prompt
 └── docs/                    # Schema, tier definitions, calibration notes
 ```

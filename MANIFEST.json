@@ -2,7 +2,7 @@
  "name": "RegBench",
  "version": "v1.0.1",
  "release_date": "2026-05-04",
- "description": "Source-grounded benchmark for regulatory cross-reference reasoning over DNV Ship Rules and Basel III §217.",
+ "description": "Source-grounded benchmark for regulatory cross-reference reasoning over DNV Ship Rules and Basel III \u00a7217.",
  "license": "CC-BY-NC-4.0",
  "paper": "RegBench: Source-Grounded Benchmarks for Regulatory Cross-Reference Reasoning (NeurIPS 2026 Datasets and Benchmarks Track)",
  "totals": {
@@ -101,41 +101,58 @@
    "bytes": 1290
   },
   "README.md": {
-   "sha256": "c347caee475cb1f9ae1e7f2b7f60a3b5d596edea678367bc2a4c70f987624865",
-   "bytes": 9837
+   "sha256": "0b030eaf5d1404de11a467d0e4bd95a74022c6c61cf2015045cca814a1316203",
+   "bytes": 10106
   },
-  "artifacts/sme_stats/v5d_calibration_slices.json": {
-   "sha256": "1f65942a3e5beb43fef7a3018f56998071dbac66ee750326b922001659e56be6",
-   "bytes": 2668
+  "artifacts/sme_stats/README.md": {
+   "sha256": "ab5a1f7c9ed25d903ad760644c25ac573aa9c994f61aef3406728bdd5d229831",
+   "bytes": 4024
   },
-  "artifacts/sme_stats/v5d_calibration_slices.csv": {
-   "sha256": "652e8308686bd5f6dda53d3223a061c86831c8a2748e67782c92195c119ce63f",
-   "bytes": 1518
+  "artifacts/sme_stats/disagreements/judge_disagreements.json": {
+   "sha256": "7e9aac86532f93146fe2a91588dab1351b6ad2dc0b0f0cb6dac1aa2e9216133e",
+   "bytes": 26737
   },
-  "artifacts/sme_stats/disposition_ledger.json": {
-   "sha256": "adae9ef3b50c3a3d529824d2f2f4eecf6d1f2231162a71d6a649185dffdf1381",
-   "bytes": 949
+  "artifacts/sme_stats/disagreements/qa_audit_disagreements_basel.json": {
+   "sha256": "9dbb61820e8f024b38966a1f1634eb187318a9e160324197f4de15aa1e82052d",
+   "bytes": 12639
+  },
+  "artifacts/sme_stats/disagreements/qa_audit_disagreements_dnv.json": {
+   "sha256": "ecb3cdc681f854dbb7577e5a377b7b0b8e27ab4cdf4fa80aa5e750f0b323d053",
+   "bytes": 5193
   },
   "artifacts/sme_stats/disposition_ledger.csv": {
    "sha256": "07bb948b2e7d4c2376171735faf5955ded4587d905a526e71c93ddcbc72613b2",
    "bytes": 527
   },
+  "artifacts/sme_stats/disposition_ledger.json": {
+   "sha256": "adae9ef3b50c3a3d529824d2f2f4eecf6d1f2231162a71d6a649185dffdf1381",
+   "bytes": 949
+  },
   "artifacts/sme_stats/judge_calibration_aggregate.json": {
-   "sha256": "ee13221c6c2f8db1a3baf8ed0104fe86533896f89b5bae0bc66c4e4a0e9cfb0b",
-   "bytes": 963
+   "sha256": "f9c6362373026fb9c928e7454e3b5ab1671cc2023e60dd81708e7f01f4a69af0",
+   "bytes": 609
   },
   "artifacts/sme_stats/judge_calibration_per_pairing.csv": {
    "sha256": "8af910c8fe9de9f08bd2f6546e4237d1ed0f57f58c9ad07b9456956f79767396",
    "bytes": 734
   },
-  "artifacts/sme_stats/README.md": {
-   "sha256": "c854acdf511a228ce4ab2ea7783d9e07be9ad74ef31ea92d6a773370f7969a8f",
-   "bytes": 2292
+  "artifacts/sme_stats/v5d_calibration_slices.csv": {
+   "sha256": "7b10c1e10353713fc8a1ee1d882e4f85119fcbb535299d23767cdb20fccc7fa3",
+   "bytes": 1366
+  },
+  "artifacts/sme_stats/v5d_calibration_slices.json": {
+   "sha256": "197d3a6d7451903e4e4d6b5f11a98f49bcb59c975f487dbd9706e84fa761543c",
+   "bytes": 2662
   }
  },
  "sme_disagreement_statistics": {
   "path": "artifacts/sme_stats/",
-  "scope": "aggregate only; no SME free-text comments, no per-item SME labels",
-  "purpose": "independent verification of v5d audit-calibration and judge-quality claims (Table 1, S4.1)"
+  "scope": "two tiers: top-level files are aggregate only (no SME free-text, no per-item labels); disagreements/ ships per-item labels and reviewer notes for CONTESTED labels only, since an agreement rate cannot be verified from the labels that agreed",
+  "purpose": "independent verification of v5d audit-calibration and judge-quality claims (Table 1, S4.1)",
+  "disagreement_files": {
+   "disagreements/judge_disagreements.json": "judge-vs-SME on answer grading; all 106 contested facts across the three S4.1 pairings",
+   "disagreements/qa_audit_disagreements_dnv.json": "v5d-vs-reviewer on item quality, DNV remaining-300 flagged set",
+   "disagreements/qa_audit_disagreements_basel.json": "v5d-vs-reviewer on item quality, Basel S217 audited slice"
+  }
  }
 }

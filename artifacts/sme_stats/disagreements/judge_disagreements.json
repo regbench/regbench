@@ -1,0 +1,1100 @@
+{
+ "generated_by": "build_disagreement_disclosure.py",
+ "scope": "fact-level disagreements only; agreeing labels are withheld as they carry no verification value and their release would expose the audit slate",
+ "annotation_visibility": {
+  "SME-1": "judge verdict visible per fact AND pre-selected (anchored review)",
+  "SME-2": "judge verdict visible per fact, selections blank (unanchored review)"
+ },
+ "pairings": {
+  "judge_vs_SME-1": {
+   "n_shared_labels": 2453,
+   "n_agree": 2444,
+   "n_disagree": 9,
+   "pct_agree": 99.63
+  },
+  "judge_vs_SME-2": {
+   "n_shared_labels": 2350,
+   "n_agree": 2290,
+   "n_disagree": 60,
+   "pct_agree": 97.45
+  },
+  "SME-1_vs_SME-2": {
+   "n_shared_labels": 1341,
+   "n_agree": 1304,
+   "n_disagree": 37,
+   "pct_agree": 97.24
+  }
+ },
+ "records": [
+  {
+   "pairing": "judge_vs_SME-1",
+   "item_id": "P50_007",
+   "condition": "gpt_5_4_full_context",
+   "fact_index": 6,
+   "judge": "absent",
+   "SME-1": "present",
+   "direction": "judge-absent/SME-1-present",
+   "in_released_pool": true
+  },
+  {
+   "pairing": "judge_vs_SME-1",
+   "item_id": "P50_007",
+   "condition": "haiku_4_5_oracle",
+   "fact_index": 6,
+   "judge": "absent",
+   "SME-1": "present",
+   "direction": "judge-absent/SME-1-present",
+   "in_released_pool": true
+  },
+  {
+   "pairing": "judge_vs_SME-1",
+   "item_id": "P50_007",
+   "condition": "minimax_m2_7_full_context",
+   "fact_index": 6,
+   "judge": "absent",
+   "SME-1": "present",
+   "direction": "judge-absent/SME-1-present",
+   "in_released_pool": true
+  },
+  {
+   "pairing": "judge_vs_SME-1",
+   "item_id": "P50_009",
+   "condition": "gpt_5_4_full_context",
+   "fact_index": 3,
+   "judge": "present",
+   "SME-1": "absent",
+   "direction": "judge-present/SME-1-absent",
+   "in_released_pool": true
+  },
+  {
+   "pairing": "judge_vs_SME-1",
+   "item_id": "P50_015",
+   "condition": "full_context",
+   "fact_index": 4,
+   "judge": "present",
+   "SME-1": "absent",
+   "direction": "judge-present/SME-1-absent",
+   "in_released_pool": true
+  },
+  {
+   "pairing": "judge_vs_SME-1",
+   "item_id": "P50_015",
+   "condition": "full_context",
+   "fact_index": 5,
+   "judge": "present",
+   "SME-1": "absent",
+   "direction": "judge-present/SME-1-absent",
+   "in_released_pool": true
+  },
+  {
+   "pairing": "judge_vs_SME-1",
+   "item_id": "P50_015",
+   "condition": "oracle",
+   "fact_index": 0,
+   "judge": "absent",
+   "SME-1": "present",
+   "direction": "judge-absent/SME-1-present",
+   "in_released_pool": true
+  },
+  {
+   "pairing": "judge_vs_SME-1",
+   "item_id": "P50_044",
+   "condition": "haiku_4_5_oracle",
+   "fact_index": 0,
+   "judge": "absent",
+   "SME-1": "present",
+   "direction": "judge-absent/SME-1-present",
+   "in_released_pool": true
+  },
+  {
+   "pairing": "judge_vs_SME-1",
+   "item_id": "P50_044",
+   "condition": "haiku_4_5_oracle",
+   "fact_index": 1,
+   "judge": "absent",
+   "SME-1": "present",
+   "direction": "judge-absent/SME-1-present",
+   "in_released_pool": true
+  },
+  {
+   "pairing": "judge_vs_SME-2",
+   "item_id": "P50_003",
+   "condition": "gpt_5_4_full_context",
+   "fact_index": 3,
+   "judge": "present",
+   "SME-2": "absent",
+   "direction": "judge-present/SME-2-absent",
+   "in_released_pool": true
+  },
+  {
+   "pairing": "judge_vs_SME-2",
+   "item_id": "P50_004",
+   "condition": "full_context",
+   "fact_index": 4,
+   "judge": "present",
+   "SME-2": "absent",
+   "direction": "judge-present/SME-2-absent",
+   "in_released_pool": true
+  },
+  {
+   "pairing": "judge_vs_SME-2",
+   "item_id": "P50_004",
+   "condition": "oracle",
+   "fact_index": 5,
+   "judge": "present",
+   "SME-2": "absent",
+   "direction": "judge-present/SME-2-absent",
+   "in_released_pool": true
+  },
+  {
+   "pairing": "judge_vs_SME-2",
+   "item_id": "P50_006",
+   "condition": "archrag",
+   "fact_index": 2,
+   "judge": "present",
+   "SME-2": "absent",
+   "direction": "judge-present/SME-2-absent",
+   "in_released_pool": true
+  },
+  {
+   "pairing": "judge_vs_SME-2",
+   "item_id": "P50_006",
+   "condition": "minimax_m2_7_full_context",
+   "fact_index": 1,
+   "judge": "absent",
+   "SME-2": "present",
+   "direction": "judge-absent/SME-2-present",
+   "in_released_pool": true
+  },
+  {
+   "pairing": "judge_vs_SME-2",
+   "item_id": "P50_007",
+   "condition": "oracle",
+   "fact_index": 6,
+   "judge": "present",
+   "SME-2": "absent",
+   "direction": "judge-present/SME-2-absent",
+   "in_released_pool": true
+  },
+  {
+   "pairing": "judge_vs_SME-2",
+   "item_id": "P50_014",
+   "condition": "gpt_5_4_full_context",
+   "fact_index": 4,
+   "judge": "absent",
+   "SME-2": "present",
+   "direction": "judge-absent/SME-2-present",
+   "in_released_pool": true
+  },
+  {
+   "pairing": "judge_vs_SME-2",
+   "item_id": "P50_015",
+   "condition": "archrag",
+   "fact_index": 4,
+   "judge": "present",
+   "SME-2": "absent",
+   "direction": "judge-present/SME-2-absent",
+   "in_released_pool": true
+  },
+  {
+   "pairing": "judge_vs_SME-2",
+   "item_id": "P50_015",
+   "condition": "gpt_5_4_full_context",
+   "fact_index": 5,
+   "judge": "absent",
+   "SME-2": "present",
+   "direction": "judge-absent/SME-2-present",
+   "in_released_pool": true
+  },
+  {
+   "pairing": "judge_vs_SME-2",
+   "item_id": "P50_015",
+   "condition": "graphrag",
+   "fact_index": 1,
+   "judge": "absent",
+   "SME-2": "present",
+   "direction": "judge-absent/SME-2-present",
+   "in_released_pool": true
+  },
+  {
+   "pairing": "judge_vs_SME-2",
+   "item_id": "P50_015",
+   "condition": "minimax_m2_7_full_context",
+   "fact_index": 2,
+   "judge": "absent",
+   "SME-2": "present",
+   "direction": "judge-absent/SME-2-present",
+   "in_released_pool": true
+  },
+  {
+   "pairing": "judge_vs_SME-2",
+   "item_id": "P50_015",
+   "condition": "oracle",
+   "fact_index": 0,
+   "judge": "absent",
+   "SME-2": "present",
+   "direction": "judge-absent/SME-2-present",
+   "in_released_pool": true
+  },
+  {
+   "pairing": "judge_vs_SME-2",
+   "item_id": "P50_015",
+   "condition": "qwen3_6_plus_full_context",
+   "fact_index": 1,
+   "judge": "absent",
+   "SME-2": "present",
+   "direction": "judge-absent/SME-2-present",
+   "in_released_pool": true
+  },
+  {
+   "pairing": "judge_vs_SME-2",
+   "item_id": "P50_015",
+   "condition": "qwen3_6_plus_full_context",
+   "fact_index": 2,
+   "judge": "absent",
+   "SME-2": "present",
+   "direction": "judge-absent/SME-2-present",
+   "in_released_pool": true
+  },
+  {
+   "pairing": "judge_vs_SME-2",
+   "item_id": "P50_015",
+   "condition": "qwen3_max_full_context",
+   "fact_index": 0,
+   "judge": "present",
+   "SME-2": "absent",
+   "direction": "judge-present/SME-2-absent",
+   "in_released_pool": true
+  },
+  {
+   "pairing": "judge_vs_SME-2",
+   "item_id": "P50_015",
+   "condition": "qwen3_max_full_context",
+   "fact_index": 1,
+   "judge": "absent",
+   "SME-2": "present",
+   "direction": "judge-absent/SME-2-present",
+   "in_released_pool": true
+  },
+  {
+   "pairing": "judge_vs_SME-2",
+   "item_id": "P50_015",
+   "condition": "qwen3_max_full_context",
+   "fact_index": 3,
+   "judge": "absent",
+   "SME-2": "present",
+   "direction": "judge-absent/SME-2-present",
+   "in_released_pool": true
+  },
+  {
+   "pairing": "judge_vs_SME-2",
+   "item_id": "P50_015",
+   "condition": "qwen3_max_full_context",
+   "fact_index": 5,
+   "judge": "absent",
+   "SME-2": "present",
+   "direction": "judge-absent/SME-2-present",
+   "in_released_pool": true
+  },
+  {
+   "pairing": "judge_vs_SME-2",
+   "item_id": "P50_016",
+   "condition": "qwen3_6_plus_full_context",
+   "fact_index": 5,
+   "judge": "absent",
+   "SME-2": "present",
+   "direction": "judge-absent/SME-2-present",
+   "in_released_pool": true
+  },
+  {
+   "pairing": "judge_vs_SME-2",
+   "item_id": "P50_016",
+   "condition": "qwen3_max_full_context",
+   "fact_index": 1,
+   "judge": "absent",
+   "SME-2": "present",
+   "direction": "judge-absent/SME-2-present",
+   "in_released_pool": true
+  },
+  {
+   "pairing": "judge_vs_SME-2",
+   "item_id": "P50_016",
+   "condition": "qwen3_max_full_context",
+   "fact_index": 5,
+   "judge": "absent",
+   "SME-2": "present",
+   "direction": "judge-absent/SME-2-present",
+   "in_released_pool": true
+  },
+  {
+   "pairing": "judge_vs_SME-2",
+   "item_id": "P50_018",
+   "condition": "minimax_m2_7_full_context",
+   "fact_index": 1,
+   "judge": "present",
+   "SME-2": "absent",
+   "direction": "judge-present/SME-2-absent",
+   "in_released_pool": true
+  },
+  {
+   "pairing": "judge_vs_SME-2",
+   "item_id": "P50_018",
+   "condition": "minimax_m2_7_full_context",
+   "fact_index": 4,
+   "judge": "absent",
+   "SME-2": "present",
+   "direction": "judge-absent/SME-2-present",
+   "in_released_pool": true
+  },
+  {
+   "pairing": "judge_vs_SME-2",
+   "item_id": "P50_020",
+   "condition": "archrag",
+   "fact_index": 1,
+   "judge": "present",
+   "SME-2": "absent",
+   "direction": "judge-present/SME-2-absent",
+   "in_released_pool": true
+  },
+  {
+   "pairing": "judge_vs_SME-2",
+   "item_id": "P50_021",
+   "condition": "archrag",
+   "fact_index": 0,
+   "judge": "present",
+   "SME-2": "absent",
+   "direction": "judge-present/SME-2-absent",
+   "in_released_pool": true
+  },
+  {
+   "pairing": "judge_vs_SME-2",
+   "item_id": "P50_021",
+   "condition": "full_context",
+   "fact_index": 4,
+   "judge": "absent",
+   "SME-2": "present",
+   "direction": "judge-absent/SME-2-present",
+   "in_released_pool": true
+  },
+  {
+   "pairing": "judge_vs_SME-2",
+   "item_id": "P50_021",
+   "condition": "oracle",
+   "fact_index": 4,
+   "judge": "absent",
+   "SME-2": "present",
+   "direction": "judge-absent/SME-2-present",
+   "in_released_pool": true
+  },
+  {
+   "pairing": "judge_vs_SME-2",
+   "item_id": "P50_022",
+   "condition": "archrag",
+   "fact_index": 0,
+   "judge": "present",
+   "SME-2": "absent",
+   "direction": "judge-present/SME-2-absent",
+   "in_released_pool": true
+  },
+  {
+   "pairing": "judge_vs_SME-2",
+   "item_id": "P50_022",
+   "condition": "archrag",
+   "fact_index": 1,
+   "judge": "present",
+   "SME-2": "absent",
+   "direction": "judge-present/SME-2-absent",
+   "in_released_pool": true
+  },
+  {
+   "pairing": "judge_vs_SME-2",
+   "item_id": "P50_023",
+   "condition": "archrag",
+   "fact_index": 0,
+   "judge": "absent",
+   "SME-2": "present",
+   "direction": "judge-absent/SME-2-present",
+   "in_released_pool": true
+  },
+  {
+   "pairing": "judge_vs_SME-2",
+   "item_id": "P50_023",
+   "condition": "graphrag",
+   "fact_index": 3,
+   "judge": "absent",
+   "SME-2": "present",
+   "direction": "judge-absent/SME-2-present",
+   "in_released_pool": true
+  },
+  {
+   "pairing": "judge_vs_SME-2",
+   "item_id": "P50_024",
+   "condition": "archrag",
+   "fact_index": 5,
+   "judge": "present",
+   "SME-2": "absent",
+   "direction": "judge-present/SME-2-absent",
+   "in_released_pool": true
+  },
+  {
+   "pairing": "judge_vs_SME-2",
+   "item_id": "P50_024",
+   "condition": "full_context",
+   "fact_index": 6,
+   "judge": "present",
+   "SME-2": "absent",
+   "direction": "judge-present/SME-2-absent",
+   "in_released_pool": true
+  },
+  {
+   "pairing": "judge_vs_SME-2",
+   "item_id": "P50_024",
+   "condition": "oracle",
+   "fact_index": 6,
+   "judge": "present",
+   "SME-2": "absent",
+   "direction": "judge-present/SME-2-absent",
+   "in_released_pool": true
+  },
+  {
+   "pairing": "judge_vs_SME-2",
+   "item_id": "P50_025",
+   "condition": "archrag",
+   "fact_index": 4,
+   "judge": "present",
+   "SME-2": "absent",
+   "direction": "judge-present/SME-2-absent",
+   "in_released_pool": true
+  },
+  {
+   "pairing": "judge_vs_SME-2",
+   "item_id": "P50_025",
+   "condition": "minimax_m2_7_full_context",
+   "fact_index": 1,
+   "judge": "present",
+   "SME-2": "absent",
+   "direction": "judge-present/SME-2-absent",
+   "in_released_pool": true
+  },
+  {
+   "pairing": "judge_vs_SME-2",
+   "item_id": "P50_026",
+   "condition": "archrag",
+   "fact_index": 0,
+   "judge": "present",
+   "SME-2": "absent",
+   "direction": "judge-present/SME-2-absent",
+   "in_released_pool": true
+  },
+  {
+   "pairing": "judge_vs_SME-2",
+   "item_id": "P50_026",
+   "condition": "archrag",
+   "fact_index": 2,
+   "judge": "present",
+   "SME-2": "absent",
+   "direction": "judge-present/SME-2-absent",
+   "in_released_pool": true
+  },
+  {
+   "pairing": "judge_vs_SME-2",
+   "item_id": "P50_027",
+   "condition": "archrag",
+   "fact_index": 2,
+   "judge": "present",
+   "SME-2": "absent",
+   "direction": "judge-present/SME-2-absent",
+   "in_released_pool": true
+  },
+  {
+   "pairing": "judge_vs_SME-2",
+   "item_id": "P50_027",
+   "condition": "archrag",
+   "fact_index": 3,
+   "judge": "present",
+   "SME-2": "absent",
+   "direction": "judge-present/SME-2-absent",
+   "in_released_pool": true
+  },
+  {
+   "pairing": "judge_vs_SME-2",
+   "item_id": "P50_031",
+   "condition": "full_context",
+   "fact_index": 5,
+   "judge": "present",
+   "SME-2": "absent",
+   "direction": "judge-present/SME-2-absent",
+   "in_released_pool": false
+  },
+  {
+   "pairing": "judge_vs_SME-2",
+   "item_id": "P50_031",
+   "condition": "qwen3_6_plus_full_context",
+   "fact_index": 4,
+   "judge": "absent",
+   "SME-2": "present",
+   "direction": "judge-absent/SME-2-present",
+   "in_released_pool": false
+  },
+  {
+   "pairing": "judge_vs_SME-2",
+   "item_id": "P50_033",
+   "condition": "archrag",
+   "fact_index": 5,
+   "judge": "present",
+   "SME-2": "absent",
+   "direction": "judge-present/SME-2-absent",
+   "in_released_pool": true
+  },
+  {
+   "pairing": "judge_vs_SME-2",
+   "item_id": "P50_034",
+   "condition": "full_context",
+   "fact_index": 1,
+   "judge": "absent",
+   "SME-2": "present",
+   "direction": "judge-absent/SME-2-present",
+   "in_released_pool": true
+  },
+  {
+   "pairing": "judge_vs_SME-2",
+   "item_id": "P50_034",
+   "condition": "full_context",
+   "fact_index": 2,
+   "judge": "absent",
+   "SME-2": "present",
+   "direction": "judge-absent/SME-2-present",
+   "in_released_pool": true
+  },
+  {
+   "pairing": "judge_vs_SME-2",
+   "item_id": "P50_034",
+   "condition": "full_context",
+   "fact_index": 3,
+   "judge": "absent",
+   "SME-2": "present",
+   "direction": "judge-absent/SME-2-present",
+   "in_released_pool": true
+  },
+  {
+   "pairing": "judge_vs_SME-2",
+   "item_id": "P50_034",
+   "condition": "full_context",
+   "fact_index": 5,
+   "judge": "absent",
+   "SME-2": "present",
+   "direction": "judge-absent/SME-2-present",
+   "in_released_pool": true
+  },
+  {
+   "pairing": "judge_vs_SME-2",
+   "item_id": "P50_037",
+   "condition": "full_context",
+   "fact_index": 2,
+   "judge": "absent",
+   "SME-2": "present",
+   "direction": "judge-absent/SME-2-present",
+   "in_released_pool": true
+  },
+  {
+   "pairing": "judge_vs_SME-2",
+   "item_id": "P50_037",
+   "condition": "graphrag",
+   "fact_index": 2,
+   "judge": "absent",
+   "SME-2": "present",
+   "direction": "judge-absent/SME-2-present",
+   "in_released_pool": true
+  },
+  {
+   "pairing": "judge_vs_SME-2",
+   "item_id": "P50_038",
+   "condition": "full_context",
+   "fact_index": 0,
+   "judge": "absent",
+   "SME-2": "present",
+   "direction": "judge-absent/SME-2-present",
+   "in_released_pool": true
+  },
+  {
+   "pairing": "judge_vs_SME-2",
+   "item_id": "P50_038",
+   "condition": "full_context",
+   "fact_index": 4,
+   "judge": "absent",
+   "SME-2": "present",
+   "direction": "judge-absent/SME-2-present",
+   "in_released_pool": true
+  },
+  {
+   "pairing": "judge_vs_SME-2",
+   "item_id": "P50_038",
+   "condition": "oracle",
+   "fact_index": 0,
+   "judge": "absent",
+   "SME-2": "present",
+   "direction": "judge-absent/SME-2-present",
+   "in_released_pool": true
+  },
+  {
+   "pairing": "judge_vs_SME-2",
+   "item_id": "P50_038",
+   "condition": "oracle",
+   "fact_index": 4,
+   "judge": "absent",
+   "SME-2": "present",
+   "direction": "judge-absent/SME-2-present",
+   "in_released_pool": true
+  },
+  {
+   "pairing": "judge_vs_SME-2",
+   "item_id": "P50_040",
+   "condition": "archrag",
+   "fact_index": 3,
+   "judge": "present",
+   "SME-2": "absent",
+   "direction": "judge-present/SME-2-absent",
+   "in_released_pool": false
+  },
+  {
+   "pairing": "judge_vs_SME-2",
+   "item_id": "P50_040",
+   "condition": "full_context",
+   "fact_index": 0,
+   "judge": "absent",
+   "SME-2": "present",
+   "direction": "judge-absent/SME-2-present",
+   "in_released_pool": false
+  },
+  {
+   "pairing": "judge_vs_SME-2",
+   "item_id": "P50_042",
+   "condition": "graphrag",
+   "fact_index": 3,
+   "judge": "absent",
+   "SME-2": "present",
+   "direction": "judge-absent/SME-2-present",
+   "in_released_pool": true
+  },
+  {
+   "pairing": "judge_vs_SME-2",
+   "item_id": "P50_043",
+   "condition": "graphrag",
+   "fact_index": 4,
+   "judge": "present",
+   "SME-2": "absent",
+   "direction": "judge-present/SME-2-absent",
+   "in_released_pool": true
+  },
+  {
+   "pairing": "judge_vs_SME-2",
+   "item_id": "P50_044",
+   "condition": "qwen3_max_full_context",
+   "fact_index": 5,
+   "judge": "absent",
+   "SME-2": "present",
+   "direction": "judge-absent/SME-2-present",
+   "in_released_pool": true
+  },
+  {
+   "pairing": "judge_vs_SME-2",
+   "item_id": "P50_049",
+   "condition": "full_context",
+   "fact_index": 5,
+   "judge": "present",
+   "SME-2": "absent",
+   "direction": "judge-present/SME-2-absent",
+   "in_released_pool": true
+  },
+  {
+   "pairing": "judge_vs_SME-2",
+   "item_id": "P50_049",
+   "condition": "graphrag",
+   "fact_index": 6,
+   "judge": "absent",
+   "SME-2": "present",
+   "direction": "judge-absent/SME-2-present",
+   "in_released_pool": true
+  },
+  {
+   "pairing": "SME-1_vs_SME-2",
+   "item_id": "P50_003",
+   "condition": "gpt_5_4_full_context",
+   "fact_index": 3,
+   "SME-1": "present",
+   "SME-2": "absent",
+   "direction": "SME-1-present/SME-2-absent",
+   "in_released_pool": true
+  },
+  {
+   "pairing": "SME-1_vs_SME-2",
+   "item_id": "P50_004",
+   "condition": "full_context",
+   "fact_index": 2,
+   "SME-1": "absent",
+   "SME-2": "present",
+   "direction": "SME-1-absent/SME-2-present",
+   "in_released_pool": true
+  },
+  {
+   "pairing": "SME-1_vs_SME-2",
+   "item_id": "P50_004",
+   "condition": "full_context",
+   "fact_index": 3,
+   "SME-1": "absent",
+   "SME-2": "present",
+   "direction": "SME-1-absent/SME-2-present",
+   "in_released_pool": true
+  },
+  {
+   "pairing": "SME-1_vs_SME-2",
+   "item_id": "P50_004",
+   "condition": "oracle",
+   "fact_index": 2,
+   "SME-1": "absent",
+   "SME-2": "present",
+   "direction": "SME-1-absent/SME-2-present",
+   "in_released_pool": true
+  },
+  {
+   "pairing": "SME-1_vs_SME-2",
+   "item_id": "P50_004",
+   "condition": "oracle",
+   "fact_index": 4,
+   "SME-1": "absent",
+   "SME-2": "present",
+   "direction": "SME-1-absent/SME-2-present",
+   "in_released_pool": true
+  },
+  {
+   "pairing": "SME-1_vs_SME-2",
+   "item_id": "P50_006",
+   "condition": "archrag",
+   "fact_index": 2,
+   "SME-1": "present",
+   "SME-2": "absent",
+   "direction": "SME-1-present/SME-2-absent",
+   "in_released_pool": true
+  },
+  {
+   "pairing": "SME-1_vs_SME-2",
+   "item_id": "P50_006",
+   "condition": "minimax_m2_7_full_context",
+   "fact_index": 1,
+   "SME-1": "absent",
+   "SME-2": "present",
+   "direction": "SME-1-absent/SME-2-present",
+   "in_released_pool": true
+  },
+  {
+   "pairing": "SME-1_vs_SME-2",
+   "item_id": "P50_007",
+   "condition": "gpt_5_4_full_context",
+   "fact_index": 6,
+   "SME-1": "present",
+   "SME-2": "absent",
+   "direction": "SME-1-present/SME-2-absent",
+   "in_released_pool": true
+  },
+  {
+   "pairing": "SME-1_vs_SME-2",
+   "item_id": "P50_007",
+   "condition": "minimax_m2_7_full_context",
+   "fact_index": 6,
+   "SME-1": "present",
+   "SME-2": "absent",
+   "direction": "SME-1-present/SME-2-absent",
+   "in_released_pool": true
+  },
+  {
+   "pairing": "SME-1_vs_SME-2",
+   "item_id": "P50_007",
+   "condition": "oracle",
+   "fact_index": 6,
+   "SME-1": "present",
+   "SME-2": "absent",
+   "direction": "SME-1-present/SME-2-absent",
+   "in_released_pool": true
+  },
+  {
+   "pairing": "SME-1_vs_SME-2",
+   "item_id": "P50_009",
+   "condition": "gpt_5_4_full_context",
+   "fact_index": 3,
+   "SME-1": "absent",
+   "SME-2": "present",
+   "direction": "SME-1-absent/SME-2-present",
+   "in_released_pool": true
+  },
+  {
+   "pairing": "SME-1_vs_SME-2",
+   "item_id": "P50_014",
+   "condition": "gpt_5_4_full_context",
+   "fact_index": 4,
+   "SME-1": "absent",
+   "SME-2": "present",
+   "direction": "SME-1-absent/SME-2-present",
+   "in_released_pool": true
+  },
+  {
+   "pairing": "SME-1_vs_SME-2",
+   "item_id": "P50_015",
+   "condition": "full_context",
+   "fact_index": 2,
+   "SME-1": "absent",
+   "SME-2": "present",
+   "direction": "SME-1-absent/SME-2-present",
+   "in_released_pool": true
+  },
+  {
+   "pairing": "SME-1_vs_SME-2",
+   "item_id": "P50_015",
+   "condition": "full_context",
+   "fact_index": 4,
+   "SME-1": "absent",
+   "SME-2": "present",
+   "direction": "SME-1-absent/SME-2-present",
+   "in_released_pool": true
+  },
+  {
+   "pairing": "SME-1_vs_SME-2",
+   "item_id": "P50_015",
+   "condition": "full_context",
+   "fact_index": 5,
+   "SME-1": "absent",
+   "SME-2": "present",
+   "direction": "SME-1-absent/SME-2-present",
+   "in_released_pool": true
+  },
+  {
+   "pairing": "SME-1_vs_SME-2",
+   "item_id": "P50_015",
+   "condition": "gpt_5_4_full_context",
+   "fact_index": 5,
+   "SME-1": "absent",
+   "SME-2": "present",
+   "direction": "SME-1-absent/SME-2-present",
+   "in_released_pool": true
+  },
+  {
+   "pairing": "SME-1_vs_SME-2",
+   "item_id": "P50_015",
+   "condition": "oracle",
+   "fact_index": 4,
+   "SME-1": "absent",
+   "SME-2": "present",
+   "direction": "SME-1-absent/SME-2-present",
+   "in_released_pool": true
+  },
+  {
+   "pairing": "SME-1_vs_SME-2",
+   "item_id": "P50_015",
+   "condition": "oracle",
+   "fact_index": 5,
+   "SME-1": "absent",
+   "SME-2": "present",
+   "direction": "SME-1-absent/SME-2-present",
+   "in_released_pool": true
+  },
+  {
+   "pairing": "SME-1_vs_SME-2",
+   "item_id": "P50_021",
+   "condition": "full_context",
+   "fact_index": 4,
+   "SME-1": "absent",
+   "SME-2": "present",
+   "direction": "SME-1-absent/SME-2-present",
+   "in_released_pool": true
+  },
+  {
+   "pairing": "SME-1_vs_SME-2",
+   "item_id": "P50_021",
+   "condition": "oracle",
+   "fact_index": 4,
+   "SME-1": "absent",
+   "SME-2": "present",
+   "direction": "SME-1-absent/SME-2-present",
+   "in_released_pool": true
+  },
+  {
+   "pairing": "SME-1_vs_SME-2",
+   "item_id": "P50_024",
+   "condition": "full_context",
+   "fact_index": 6,
+   "SME-1": "present",
+   "SME-2": "absent",
+   "direction": "SME-1-present/SME-2-absent",
+   "in_released_pool": true
+  },
+  {
+   "pairing": "SME-1_vs_SME-2",
+   "item_id": "P50_024",
+   "condition": "oracle",
+   "fact_index": 6,
+   "SME-1": "present",
+   "SME-2": "absent",
+   "direction": "SME-1-present/SME-2-absent",
+   "in_released_pool": true
+  },
+  {
+   "pairing": "SME-1_vs_SME-2",
+   "item_id": "P50_025",
+   "condition": "archrag",
+   "fact_index": 4,
+   "SME-1": "present",
+   "SME-2": "absent",
+   "direction": "SME-1-present/SME-2-absent",
+   "in_released_pool": true
+  },
+  {
+   "pairing": "SME-1_vs_SME-2",
+   "item_id": "P50_025",
+   "condition": "minimax_m2_7_full_context",
+   "fact_index": 1,
+   "SME-1": "present",
+   "SME-2": "absent",
+   "direction": "SME-1-present/SME-2-absent",
+   "in_released_pool": true
+  },
+  {
+   "pairing": "SME-1_vs_SME-2",
+   "item_id": "P50_031",
+   "condition": "full_context",
+   "fact_index": 5,
+   "SME-1": "present",
+   "SME-2": "absent",
+   "direction": "SME-1-present/SME-2-absent",
+   "in_released_pool": false
+  },
+  {
+   "pairing": "SME-1_vs_SME-2",
+   "item_id": "P50_034",
+   "condition": "full_context",
+   "fact_index": 1,
+   "SME-1": "absent",
+   "SME-2": "present",
+   "direction": "SME-1-absent/SME-2-present",
+   "in_released_pool": true
+  },
+  {
+   "pairing": "SME-1_vs_SME-2",
+   "item_id": "P50_034",
+   "condition": "full_context",
+   "fact_index": 2,
+   "SME-1": "absent",
+   "SME-2": "present",
+   "direction": "SME-1-absent/SME-2-present",
+   "in_released_pool": true
+  },
+  {
+   "pairing": "SME-1_vs_SME-2",
+   "item_id": "P50_034",
+   "condition": "full_context",
+   "fact_index": 3,
+   "SME-1": "absent",
+   "SME-2": "present",
+   "direction": "SME-1-absent/SME-2-present",
+   "in_released_pool": true
+  },
+  {
+   "pairing": "SME-1_vs_SME-2",
+   "item_id": "P50_034",
+   "condition": "full_context",
+   "fact_index": 5,
+   "SME-1": "absent",
+   "SME-2": "present",
+   "direction": "SME-1-absent/SME-2-present",
+   "in_released_pool": true
+  },
+  {
+   "pairing": "SME-1_vs_SME-2",
+   "item_id": "P50_037",
+   "condition": "full_context",
+   "fact_index": 2,
+   "SME-1": "absent",
+   "SME-2": "present",
+   "direction": "SME-1-absent/SME-2-present",
+   "in_released_pool": true
+  },
+  {
+   "pairing": "SME-1_vs_SME-2",
+   "item_id": "P50_038",
+   "condition": "full_context",
+   "fact_index": 0,
+   "SME-1": "absent",
+   "SME-2": "present",
+   "direction": "SME-1-absent/SME-2-present",
+   "in_released_pool": true
+  },
+  {
+   "pairing": "SME-1_vs_SME-2",
+   "item_id": "P50_038",
+   "condition": "full_context",
+   "fact_index": 4,
+   "SME-1": "absent",
+   "SME-2": "present",
+   "direction": "SME-1-absent/SME-2-present",
+   "in_released_pool": true
+  },
+  {
+   "pairing": "SME-1_vs_SME-2",
+   "item_id": "P50_038",
+   "condition": "oracle",
+   "fact_index": 0,
+   "SME-1": "absent",
+   "SME-2": "present",
+   "direction": "SME-1-absent/SME-2-present",
+   "in_released_pool": true
+  },
+  {
+   "pairing": "SME-1_vs_SME-2",
+   "item_id": "P50_038",
+   "condition": "oracle",
+   "fact_index": 4,
+   "SME-1": "absent",
+   "SME-2": "present",
+   "direction": "SME-1-absent/SME-2-present",
+   "in_released_pool": true
+  },
+  {
+   "pairing": "SME-1_vs_SME-2",
+   "item_id": "P50_040",
+   "condition": "full_context",
+   "fact_index": 0,
+   "SME-1": "absent",
+   "SME-2": "present",
+   "direction": "SME-1-absent/SME-2-present",
+   "in_released_pool": false
+  },
+  {
+   "pairing": "SME-1_vs_SME-2",
+   "item_id": "P50_043",
+   "condition": "full_context",
+   "fact_index": 0,
+   "SME-1": "present",
+   "SME-2": "absent",
+   "direction": "SME-1-present/SME-2-absent",
+   "in_released_pool": true
+  },
+  {
+   "pairing": "SME-1_vs_SME-2",
+   "item_id": "P50_049",
+   "condition": "full_context",
+   "fact_index": 5,
+   "SME-1": "present",
+   "SME-2": "absent",
+   "direction": "SME-1-present/SME-2-absent",
+   "in_released_pool": true
+  }
+ ],
+ "merge_note": "judge_vs_SME-1 uses SME-1 merged + judge-accuracy overlay (the merge behind the published 99.6%); SME-1_vs_SME-2 uses SME-1 merged WITHOUT that overlay (the merge behind the published 97.2%). Gwet AC1 is sensitive to this choice, which is why AC1 is reported in the paper rather than recomputed here.",
+ "release_reconciliation": {
+  "note": "Some records reference items the audit KILLED, so they are absent from data/*.jsonl by design. They are retained here because removing them would hide the disagreements that caused the kill.",
+  "records_referencing_released_items": 100,
+  "records_referencing_killed_items": 6,
+  "killed_item_ids": [
+   "P50_031",
+   "P50_040"
+  ]
+ }
+}
