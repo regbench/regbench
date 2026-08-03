@@ -1,0 +1,14 @@
+pairing,n_facts,agree,agree_pct,ci95_lo,ci95_hi,judge_lenient,judge_strict,labels_without_release_counterpart
+archrag,87,87,100.0,95.77,100.0,0,0,0
+bm25_top_10,269,264,98.14,95.72,99.2,4,1,20
+full_context,269,258,95.91,92.83,97.7,10,1,20
+gpt_5_4_full_context,269,260,96.65,93.76,98.23,6,3,20
+graphrag,87,87,100.0,95.77,100.0,0,0,0
+haiku_4_5_oracle,269,260,96.65,93.76,98.23,4,5,20
+hipporag,269,266,98.88,96.77,99.62,3,0,20
+minimax_m2_7_full_context,87,86,98.85,93.77,99.8,0,1,0
+opus_4_6_oracle,264,258,97.73,95.13,98.95,4,2,20
+oracle,269,261,97.03,94.24,98.49,8,0,20
+qwen3_6_plus_full_context,87,87,100.0,95.77,100.0,0,0,0
+qwen3_max_full_context,87,87,100.0,95.77,100.0,0,0,0
+TOTAL,2313,2261,97.75,97.06,98.28,39,13,140

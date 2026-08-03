@@ -1,108 +1,141 @@
 {
-  "name": "RegBench",
-  "version": "v1.0.1",
-  "release_date": "2026-05-04",
-  "description": "Source-grounded benchmark for regulatory cross-reference reasoning over DNV Ship Rules and Basel III §217.",
-  "license": "CC-BY-NC-4.0",
-  "paper": "RegBench: Source-Grounded Benchmarks for Regulatory Cross-Reference Reasoning (NeurIPS 2026 Datasets and Benchmarks Track)",
-  "totals": {
-    "questions": 827,
-    "atomic_facts": 4766,
-    "dnv_main_questions": 499,
-    "dnv_pilot_questions": 47,
-    "basel_questions": 281
+ "name": "RegBench",
+ "version": "v1.0.1",
+ "release_date": "2026-05-04",
+ "description": "Source-grounded benchmark for regulatory cross-reference reasoning over DNV Ship Rules and Basel III §217.",
+ "license": "CC-BY-NC-4.0",
+ "paper": "RegBench: Source-Grounded Benchmarks for Regulatory Cross-Reference Reasoning (NeurIPS 2026 Datasets and Benchmarks Track)",
+ "totals": {
+  "questions": 827,
+  "atomic_facts": 4766,
+  "dnv_main_questions": 499,
+  "dnv_pilot_questions": 47,
+  "basel_questions": 281
+ },
+ "audit": {
+  "method": "v5d selective audit (locked prompt)",
+  "auditor_model": "gpt-5.4",
+  "reasoning_effort": "xhigh",
+  "temperature": 0,
+  "prompt_file": "prompts/v5d_audit.md",
+  "verdicts_file": "data/v5d_verdicts.jsonl",
+  "verdicts_coverage": "47/47 pilot, 242/499 DNV main, 0/281 Basel (audited subset; see data/v5d_verdicts.README.md)"
+ },
+ "evaluation": {
+  "judge_model": "claude-sonnet-4-6",
+  "cross_judge_replay": "gpt-5.4 (medium)",
+  "temperature": 0,
+  "shot_count": 1,
+  "reasoning_effort_default": "medium",
+  "context_cap_dnv_chars": 600000,
+  "grading_rule": "strict atomic-fact conjunction",
+  "grader_reference": "examples/grade_strict.py"
+ },
+ "reproducibility": {
+  "pipeline_root": "pipeline/",
+  "configuration_pattern": "Path constants and CLI defaults at the top of each runner (see pipeline/README.md)",
+  "pdf_ingestion": "pipeline/ingestion/pdf_converter/Magic-PDF (vendored MinerU)",
+  "cache_layer": "pipeline/{audit,judge,generation,baselines}/llm_client.py (deterministic; cache_dir defaults to ./.cache/llm)"
+ },
+ "sources": {
+  "dnv_ship_rules": {
+   "access": "https://rules.dnv.com (free registration required)",
+   "redistributed": false
   },
-  "audit": {
-    "method": "v5d selective audit (locked prompt)",
-    "auditor_model": "gpt-5.4",
-    "reasoning_effort": "xhigh",
-    "temperature": 0,
-    "prompt_file": "prompts/v5d_audit.md",
-    "verdicts_file": "data/v5d_verdicts.jsonl",
-    "verdicts_coverage": "47/47 pilot, 242/499 DNV main, 0/281 Basel (audited subset; see data/v5d_verdicts.README.md)"
-  },
-  "evaluation": {
-    "judge_model": "claude-sonnet-4-6",
-    "cross_judge_replay": "gpt-5.4 (medium)",
-    "temperature": 0,
-    "shot_count": 1,
-    "reasoning_effort_default": "medium",
-    "context_cap_dnv_chars": 600000,
-    "grading_rule": "strict atomic-fact conjunction",
-    "grader_reference": "examples/grade_strict.py"
-  },
-  "reproducibility": {
-    "pipeline_root": "pipeline/",
-    "configuration_pattern": "Path constants and CLI defaults at the top of each runner (see pipeline/README.md)",
-    "pdf_ingestion": "pipeline/ingestion/pdf_converter/Magic-PDF (vendored MinerU)",
-    "cache_layer": "pipeline/{audit,judge,generation,baselines}/llm_client.py (deterministic; cache_dir defaults to ./.cache/llm)"
-  },
-  "sources": {
-    "dnv_ship_rules": {
-      "access": "https://rules.dnv.com (free registration required)",
-      "redistributed": false
-    },
-    "basel_iii_section_217": {
-      "access": "https://www.ecfr.gov/current/title-12/chapter-II/subchapter-A/part-217 (public domain)",
-      "redistributed": false
-    }
-  },
-  "files": {
-    "data/dnv.jsonl": {
-      "sha256": "d7022526a0c625994250ea1b30e9c2853c1470eb5100255d7fd28bc20cae7513",
-      "bytes": 1986989
-    },
-    "data/pilot.jsonl": {
-      "sha256": "b62f5ed974eaa50e5aeb3cfad44812f8c9b7b86c6f3783e207fc923326cd9d2f",
-      "bytes": 198155
-    },
-    "data/basel.jsonl": {
-      "sha256": "808e3083724ac349440decf1a4886a8e4ff5711211300a022b358d0d6ea25410",
-      "bytes": 1607632
-    },
-    "data/v5d_verdicts.jsonl": {
-      "sha256": "08e448644eac67b18085ecfda236482dcbf1d4f75fb159834fda5fa6c47cb894",
-      "bytes": 137100
-    },
-    "data/repair_audit/dnv_stageA_repairs_2026-05-04.csv": {
-      "sha256": "36b20b1d4c36f45ee2008d8d0230f5ebb5fa10319fa0e78bba638456d259fcf4",
-      "bytes": 14233
-    },
-    "data/repair_audit/dnv_repair_diff_2026-05-04.csv": {
-      "sha256": "265546098ba58d4c383228290edcbe1578e79705eec2b34d1b6c7ee4933507d3",
-      "bytes": 82078
-    },
-    "prompts/v5d_audit.md": {
-      "sha256": "4a5b592ca5589f4a4d64c1f7663b1aed09a04e7d897e55f608b7683016b6ef43",
-      "bytes": 14115
-    },
-    "examples/grade_strict.py": {
-      "sha256": "11b3c1d3a262566734b2210f2e19f8285bd56f4060966798442cc373ad6e05aa",
-      "bytes": 5896
-    },
-    "examples/load_dataset.py": {
-      "sha256": "80a61540ce7bafd9acad55bf817006a70e4f7f5b85b215bc0fea4ac2b1025c31",
-      "bytes": 1646
-    },
-    "docs/SCHEMA.md": {
-      "sha256": "f092b745bd36e220fc80e2c2b33d1499e1cae45af3dbc8b52cf73592485184c2",
-      "bytes": 3194
-    },
-    "docs/TIERS.md": {
-      "sha256": "8e4f376892ccef7d0ba13abc0049ed2bc6d748e9d95bba680a22c0233d1a0634",
-      "bytes": 1640
-    },
-    "docs/CALIBRATION.md": {
-      "sha256": "7504b9c911e2b24b4836b27f26769f3a1c33efad049d24ae567e273e7298ec13",
-      "bytes": 3002
-    },
-    "LICENSE": {
-      "sha256": "f0280a173b6d0b5d90c78de6773965c592851e7dfc89482ed3d403e30e76ce3a",
-      "bytes": 1290
-    },
-    "README.md": {
-      "sha256": "c347caee475cb1f9ae1e7f2b7f60a3b5d596edea678367bc2a4c70f987624865",
-      "bytes": 9837
-    }
+  "basel_iii_section_217": {
+   "access": "https://www.ecfr.gov/current/title-12/chapter-II/subchapter-A/part-217 (public domain)",
+   "redistributed": false
   }
+ },
+ "files": {
+  "data/dnv.jsonl": {
+   "sha256": "d7022526a0c625994250ea1b30e9c2853c1470eb5100255d7fd28bc20cae7513",
+   "bytes": 1986989
+  },
+  "data/pilot.jsonl": {
+   "sha256": "b62f5ed974eaa50e5aeb3cfad44812f8c9b7b86c6f3783e207fc923326cd9d2f",
+   "bytes": 198155
+  },
+  "data/basel.jsonl": {
+   "sha256": "808e3083724ac349440decf1a4886a8e4ff5711211300a022b358d0d6ea25410",
+   "bytes": 1607632
+  },
+  "data/v5d_verdicts.jsonl": {
+   "sha256": "08e448644eac67b18085ecfda236482dcbf1d4f75fb159834fda5fa6c47cb894",
+   "bytes": 137100
+  },
+  "data/repair_audit/dnv_stageA_repairs_2026-05-04.csv": {
+   "sha256": "36b20b1d4c36f45ee2008d8d0230f5ebb5fa10319fa0e78bba638456d259fcf4",
+   "bytes": 14233
+  },
+  "data/repair_audit/dnv_repair_diff_2026-05-04.csv": {
+   "sha256": "265546098ba58d4c383228290edcbe1578e79705eec2b34d1b6c7ee4933507d3",
+   "bytes": 82078
+  },
+  "prompts/v5d_audit.md": {
+   "sha256": "4a5b592ca5589f4a4d64c1f7663b1aed09a04e7d897e55f608b7683016b6ef43",
+   "bytes": 14115
+  },
+  "examples/grade_strict.py": {
+   "sha256": "11b3c1d3a262566734b2210f2e19f8285bd56f4060966798442cc373ad6e05aa",
+   "bytes": 5896
+  },
+  "examples/load_dataset.py": {
+   "sha256": "80a61540ce7bafd9acad55bf817006a70e4f7f5b85b215bc0fea4ac2b1025c31",
+   "bytes": 1646
+  },
+  "docs/SCHEMA.md": {
+   "sha256": "f092b745bd36e220fc80e2c2b33d1499e1cae45af3dbc8b52cf73592485184c2",
+   "bytes": 3194
+  },
+  "docs/TIERS.md": {
+   "sha256": "8e4f376892ccef7d0ba13abc0049ed2bc6d748e9d95bba680a22c0233d1a0634",
+   "bytes": 1640
+  },
+  "docs/CALIBRATION.md": {
+   "sha256": "7504b9c911e2b24b4836b27f26769f3a1c33efad049d24ae567e273e7298ec13",
+   "bytes": 3002
+  },
+  "LICENSE": {
+   "sha256": "f0280a173b6d0b5d90c78de6773965c592851e7dfc89482ed3d403e30e76ce3a",
+   "bytes": 1290
+  },
+  "README.md": {
+   "sha256": "c347caee475cb1f9ae1e7f2b7f60a3b5d596edea678367bc2a4c70f987624865",
+   "bytes": 9837
+  },
+  "artifacts/sme_stats/v5d_calibration_slices.json": {
+   "sha256": "1f65942a3e5beb43fef7a3018f56998071dbac66ee750326b922001659e56be6",
+   "bytes": 2668
+  },
+  "artifacts/sme_stats/v5d_calibration_slices.csv": {
+   "sha256": "652e8308686bd5f6dda53d3223a061c86831c8a2748e67782c92195c119ce63f",
+   "bytes": 1518
+  },
+  "artifacts/sme_stats/disposition_ledger.json": {
+   "sha256": "adae9ef3b50c3a3d529824d2f2f4eecf6d1f2231162a71d6a649185dffdf1381",
+   "bytes": 949
+  },
+  "artifacts/sme_stats/disposition_ledger.csv": {
+   "sha256": "07bb948b2e7d4c2376171735faf5955ded4587d905a526e71c93ddcbc72613b2",
+   "bytes": 527
+  },
+  "artifacts/sme_stats/judge_calibration_aggregate.json": {
+   "sha256": "ee13221c6c2f8db1a3baf8ed0104fe86533896f89b5bae0bc66c4e4a0e9cfb0b",
+   "bytes": 963
+  },
+  "artifacts/sme_stats/judge_calibration_per_pairing.csv": {
+   "sha256": "8af910c8fe9de9f08bd2f6546e4237d1ed0f57f58c9ad07b9456956f79767396",
+   "bytes": 734
+  },
+  "artifacts/sme_stats/README.md": {
+   "sha256": "c854acdf511a228ce4ab2ea7783d9e07be9ad74ef31ea92d6a773370f7969a8f",
+   "bytes": 2292
+  }
+ },
+ "sme_disagreement_statistics": {
+  "path": "artifacts/sme_stats/",
+  "scope": "aggregate only; no SME free-text comments, no per-item SME labels",
+  "purpose": "independent verification of v5d audit-calibration and judge-quality claims (Table 1, S4.1)"
+ }
 }

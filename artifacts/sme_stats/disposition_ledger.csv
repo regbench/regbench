@@ -1,0 +1,4 @@
+additional_sme_found_defect_kills,confirmed_defective,flag_precision_pct,flags,kill,note,pool,repair,slice,source,spurious
+1,,,9,1,1 kill among flags + 1 SME-found defect v5d missed (also killed); pilot 49->47,,6,dnv_pilot,disposition ledger; PAPER_NUMBERS S2l,2
+,,,46,,v5d flags on the DNV remaining-300 slice routed to two annotators (23/23); Stage-A: 10 items repaired (21 fact corrections); 1 item killed (OCR-damaged source),,,dnv_scale_remaining,PAPER_NUMBERS S2j/S2n; E-ledger,
+,56,94.9,59,7,,288,49,basel,tex:369,3

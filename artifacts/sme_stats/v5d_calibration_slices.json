@@ -1,0 +1,120 @@
+{
+ "generated": "2026-07-24",
+ "slices": [
+  {
+   "slice": "dnv_train_test_combined_full_audit",
+   "corpus": "DNV",
+   "n_items": 200,
+   "n_facts": 1117,
+   "item_agree_k": 198,
+   "item_agree_n": 200,
+   "fact_agree_k": 1107,
+   "fact_agree_n": 1117,
+   "sme_flag_recall_k": 38,
+   "sme_flag_recall_n": 39,
+   "flag_precision_k": 38,
+   "flag_precision_n": 38,
+   "source": "Table 1 'Full audit DNV TRAIN+TEST'; \u00a74.1; PAPER_NUMBERS",
+   "item_agree_ci95": [
+    96.43,
+    99.73
+   ],
+   "fact_agree_ci95": [
+    98.36,
+    99.51
+   ]
+  },
+  {
+   "slice": "dnv_test_pass_set_blind",
+   "corpus": "DNV",
+   "n_facts_passed": 446,
+   "passed_miss_k": 0,
+   "passed_miss_n": 446,
+   "rule_of_three_ucb_pct": 0.67,
+   "fact_agree_k": 561,
+   "fact_agree_n": 567,
+   "iaa_overlap_items": 20,
+   "iaa_kappa_item": 0.77,
+   "iaa_kappa_fact": 0.905,
+   "annotation_visibility": "blind at fact level (interface-enforced); item-level advisory hint",
+   "source": "\u00a74.1 primary miss-rate estimate; tex:361-365",
+   "fact_agree_ci95": [
+    97.71,
+    99.51
+   ]
+  },
+  {
+   "slice": "dnv_selective_split",
+   "corpus": "DNV",
+   "item_agree_pct": 100.0,
+   "fact_agree_k": 256,
+   "fact_agree_n": 271,
+   "source": "Table 1 selective row; appendix",
+   "fact_agree_ci95": [
+    91.07,
+    96.62
+   ]
+  },
+  {
+   "slice": "basel_audited_slice",
+   "corpus": "Basel",
+   "item_agree_k": 76,
+   "item_agree_n": 79,
+   "fact_agree_k": 453,
+   "fact_agree_n": 478,
+   "iaa_ac1": 0.54,
+   "iaa_overlap_items": 4,
+   "iaa_note": "small-n stability statistic, not transfer evidence (paper \u00a74.1)",
+   "source": "tex:369; Table 1 Basel row",
+   "item_agree_ci95": [
+    89.42,
+    98.7
+   ],
+   "fact_agree_ci95": [
+    92.39,
+    96.43
+   ]
+  },
+  {
+   "slice": "basel_reviewerA_pass_set",
+   "corpus": "Basel",
+   "n_facts_passed": 122,
+   "passed_miss_k": 0,
+   "passed_miss_n": 122,
+   "rule_of_three_ucb_pct": 2.5,
+   "annotation_visibility": "advisory at fact level (v5d verdict+reason visible)",
+   "source": "\u00a74.1; tex:363"
+  },
+  {
+   "slice": "aggregate_union_all_slices",
+   "corpus": "DNV+Basel",
+   "item_agree_k": 366,
+   "item_agree_n": 374,
+   "fact_agree_k": 2088,
+   "fact_agree_n": 2143,
+   "source": "Table 1 aggregate row",
+   "item_agree_ci95": [
+    95.84,
+    98.91
+   ],
+   "fact_agree_ci95": [
+    96.67,
+    98.02
+   ]
+  },
+  {
+   "slice": "pre_audit_baseline_sme3_100q",
+   "corpus": "DNV",
+   "fact_gt_acc_k": 526,
+   "fact_gt_acc_n": 564,
+   "strict_ok_items": 88,
+   "n_items": 100,
+   "annotation_visibility": "blind (audit predates v5d)",
+   "source": "tex:387; \u00a73.3",
+   "fact_gt_acc_ci95": [
+    90.89,
+    95.05
+   ]
+  }
+ ]
+}

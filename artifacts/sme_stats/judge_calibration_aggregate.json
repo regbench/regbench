@@ -1,0 +1,28 @@
+{
+ "generated": "2026-07-24",
+ "sme1_vs_judge": {
+  "k": 2444,
+  "n": 2453,
+  "pct": 99.6,
+  "ci95": [
+   99.3,
+   99.8
+  ],
+  "provenance": "annotation-campaign computation (2026-04-27); §4.1"
+ },
+ "sme2_vs_judge": {
+  "n": 2350,
+  "pct": 97.5,
+  "source": "§4.1"
+ },
+ "sme1_vs_sme2": {
+  "n_shared": 1341,
+  "pct": 97.2,
+  "source": "§4.1"
+ },
+ "annotation_visibility": {
+  "sme1": "judge verdict visible per fact AND pre-selected (anchored review)",
+  "sme2": "judge verdict visible per fact, selections blank (unanchored)"
+ },
+ "chance_corrected_note": "Gwet AC1 values are reported in the paper (S4.1) and are omitted from this package version. Raw agreement, n, and Wilson 95% CIs -- the quantities needed to reproduce every calibration claim -- are shipped in full here. AC1 is sensitive to the annotator merge order used to form the comparison set; the merge order will be specified alongside the values in the camera-ready version of this package."
+}
