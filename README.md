@@ -7,7 +7,7 @@ RegBench is a benchmark for **source-grounded cross-reference traversal** in reg
 
 Items are scored at the **work-product level** (strict atomic-fact conjunction): an answer is correct only if every `required_facts` proposition is verifiably present and grounded in the source. This catches the "guessed verdict, broken derivation" failure mode that aggregate scoring hides.
 
-> **Paper:** RegBench: Source-Grounded Benchmarks for Regulatory Cross-Reference Reasoning (ICLR 2027 Datasets and Benchmarks Track)
+> **Paper:** RegBench: Source-Grounded Benchmarks for Regulatory Cross-Reference Reasoning (ICLR 2027 Conference Submission)
 > **Project page:** https://regbench.github.io/
 > **Dataset (Hugging Face):** https://huggingface.co/datasets/regbench/regbench-release
 
