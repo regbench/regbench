@@ -143,6 +143,30 @@
   "artifacts/sme_stats/v5d_calibration_slices.json": {
    "sha256": "197d3a6d7451903e4e4d6b5f11a98f49bcb59c975f487dbd9706e84fa761543c",
    "bytes": 2662
+  },
+  "artifacts/key_sensitivity/README.md": {
+   "sha256": "3b5a0b1658fe7430bbf0d8b439ddd9238643ff26ff521b7fb197e0e50e9922f8",
+   "bytes": 1899
+  },
+  "artifacts/key_sensitivity/basel_perturbed_keys.json": {
+   "sha256": "cce14997d0a05febd0d94cb00361c990bd6bc1863abeea2a5098ee2272d65026",
+   "bytes": 425857
+  },
+  "artifacts/key_sensitivity/basel_rejudge.json": {
+   "sha256": "ffc3ad2fb5ef94bea4eee493914b86574ef723379744bb97bcc1883b1821c320",
+   "bytes": 563235
+  },
+  "artifacts/key_sensitivity/dnv_perturbed_keys.json": {
+   "sha256": "ad405ca8f56e5c08f24cffcf9ca87211c5459271347aa463c55a9ec59bc23025",
+   "bytes": 420376
+  },
+  "artifacts/key_sensitivity/dnv_rejudge.json": {
+   "sha256": "d6797e3121efda4e50c7793e9e30aca7d6ebff70cb196be105d16fc0825c1d54",
+   "bytes": 546150
+  },
+  "artifacts/key_sensitivity/verify.py": {
+   "sha256": "677006a543d08bbaad0fb60d031b8640ebd51a843ec5ed0b3bc8a95bf7b5856e",
+   "bytes": 1262
   }
  },
  "sme_disagreement_statistics": {
